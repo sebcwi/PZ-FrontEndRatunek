@@ -13,6 +13,8 @@ import ProfilePage from './Pages/ProfilePage';
 import LodziarniaPage from "./Pages/LodziarniaPage"
 import RegisterPage from './Pages/RegisterPage';
 import MapPage from './Pages/MapPage';
+import EditTastePage from './Pages/EditTastePage';
+import AddTastePage from './Pages/AddTastePage';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
           <Route exact path="/profile" component={ProfilePage}/>
           <Route exact path="/lodziarnia" component={LodziarniaPage}/>
           <Route exact path="/register" component={RegisterPage}/>
+          <Route exact path="/editTastePage" component={EditTastePage}/>
+          <Route exact path="/addTastePage" component={AddTastePage}/>
+          
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,8 @@
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import React,{useEffect, useState} from 'react';
 import { getApi } from '../apiTools/apiTools';
+import { useHistory } from 'react-router-dom'
+
 
 
 const containerStyle = {
@@ -9,14 +11,15 @@ const containerStyle = {
   };
   
   const center = {
-    lat: -51.21006,
-    lng: 16.1619
+    lat: 51.207007,
+    lng: 16.155323
   };
 
 const MapPage = () =>{
 
     const [lodziarnie,setLodziarnie] = useState('')
     const [error,setError] = useState('')
+    let history = useHistory()
 
     useEffect(()=>{
         getApi('/lodziarnia/all',setLodziarnie,setError)
@@ -37,8 +40,6 @@ const MapPage = () =>{
       const onUnmount = React.useCallback(function callback(map) {
         setMap(null)
       }, [])
-    
-    //   console.log(lodziarnie)
 
       return isLoaded ? (
           <GoogleMap
@@ -49,8 +50,9 @@ const MapPage = () =>{
             onUnmount={onUnmount}
           >
               {lodziarnie.data && lodziarnie.data.map((lodziarnia,key)=>{
-                  console.log(lodziarnia)
-                  return <Marker key={key} position={{lat:lodziarnia.lat, lng: lodziarnia.lon}}/>
+                  return <Marker key={key} position={{lat:lodziarnia.lat, lng: lodziarnia.lon}} onClick={()=>{
+                    history.push('/lodziarnia?address='+lodziarnia.adress)
+                  }}/>
               })}
           </GoogleMap>
       ) : <></>

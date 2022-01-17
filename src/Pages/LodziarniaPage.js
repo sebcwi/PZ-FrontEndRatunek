@@ -15,7 +15,6 @@ const LodziarniaPage = (props) => {
         getApi('/lodziarnia/taste?address='+address,setTaste,setError)
     },[setLodziarnia,setTaste])
     return(<>
-    {taste && console.log(taste)}
         <Row className='p-2 mx-4'>
             <Col>
                 <p>Name: {lodziarnia.data && lodziarnia.data.name}</p>

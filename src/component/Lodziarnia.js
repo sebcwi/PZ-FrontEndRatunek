@@ -14,7 +14,6 @@ const Lodziarnia = (props) => {
     const handleAddFavo = () =>{
         const localUser = JSON.parse(localStorage.getItem('user'))
         const data = {nazwa: props.data.name,adress:props.data.adress}
-        console.log(localUser)
         postApiWithHead('/user/addFavourite',data,localUser.data.token,setFavo,setError)
     }
 
@@ -23,7 +22,6 @@ const Lodziarnia = (props) => {
         getApiWithHead('/user/profile', localUser.data.token,setCurrentFavo,setError)
     },[setCurrentFavo])
 
-    // console.log(currentFavo)
     return(
     <>
         <Row className='border border-dark p-1 mx-2'>

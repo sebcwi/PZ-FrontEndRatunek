@@ -32,6 +32,8 @@ const RegisterPage = () => {
                     <input type="text" className="form-control mb-3" placeholder="Name" {...register("name")}/>
                     <input type="email" className="form-control mb-3" placeholder="Email" {...register("email")}/>
                     <input type="password" className="form-control mb-3" placeholder="Password" {...register("password")}/>
+                    
+                    
                     <button type="submit" className="btn btn-primary">Register</button>
                 </form>
             </Col>
