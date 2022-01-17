@@ -11,6 +11,8 @@ import HomePage from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage'
 import ProfilePage from './Pages/ProfilePage';
 import LodziarniaPage from "./Pages/LodziarniaPage"
+import RegisterPage from './Pages/RegisterPage';
+import MapPage from './Pages/MapPage';
 
 function App() {
   return (
@@ -18,10 +20,12 @@ function App() {
       <NavBarComponent/>
       <div>
         <Switch>
-          <Route exact path="/" component={HomePage}/>
+          <Route exact path="/home" component={HomePage}/>
           <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/mapa" component={MapPage}/>
           <Route exact path="/profile" component={ProfilePage}/>
           <Route exact path="/lodziarnia" component={LodziarniaPage}/>
+          <Route exact path="/register" component={RegisterPage}/>
         </Switch>
       </div>
     </Router>

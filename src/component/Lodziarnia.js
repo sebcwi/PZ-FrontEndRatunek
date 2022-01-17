@@ -1,8 +1,29 @@
 import { Row,Col } from 'react-bootstrap';
+import react,{useState,useEffect} from "react";
 import { Link } from 'react-router-dom';
+import { postApiWithHead,getApiWithHead} from '../apiTools/apiTools';
 
 
 const Lodziarnia = (props) => {
+
+    const [favo, setFavo] = useState({})
+    const [currentFavo,setCurrentFavo] = useState([])
+    const [error,setError] = useState('')
+    const [localUser,setLocalUser] = useState({})
+
+    const handleAddFavo = () =>{
+        const localUser = JSON.parse(localStorage.getItem('user'))
+        const data = {nazwa: props.data.name,adress:props.data.adress}
+        console.log(localUser)
+        postApiWithHead('/user/addFavourite',data,localUser.data.token,setFavo,setError)
+    }
+
+    useEffect(()=>{
+        const localUser = JSON.parse(localStorage.getItem('user'))
+        getApiWithHead('/user/profile', localUser.data.token,setCurrentFavo,setError)
+    },[setCurrentFavo])
+
+    // console.log(currentFavo)
     return(
     <>
         <Row className='border border-dark p-1 mx-2'>
@@ -16,6 +37,7 @@ const Lodziarnia = (props) => {
                 }}>
                     Zobacz Wiecej
             </Link>
+            <button className='btn btn-primary my-2' onClick={handleAddFavo}>Dodaj do ulubionych</button>
         </Row>
     </>)
 }

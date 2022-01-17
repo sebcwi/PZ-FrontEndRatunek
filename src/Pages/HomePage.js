@@ -14,15 +14,15 @@ const HomePage = () => {
     useEffect(()=>{
         getApi('/health/ping',setHealth,setError)
         getApi('/lodziarnia/all',setLodziarnie,setError)
-    },[setHealth])
+    },[setLodziarnie,setHealth])
 
     return (<>
         <p className="text-center">Api Status: {health.data}</p>
         <Row>
-            {lodziarnie.data && lodziarnie.data.map((lodziania,key)=>{
+            {lodziarnie && lodziarnie.data.map((lodziania,key)=>{
                 return(
-                <Col md={3}>
-                    <Lodziarnia key={key} data={lodziania}/>
+                <Col md={3} key={key}>
+                    <Lodziarnia data={lodziania}/>
                 </Col>
                 )
             })}

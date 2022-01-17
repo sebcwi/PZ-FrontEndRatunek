@@ -1,7 +1,7 @@
 import {Navbar,Container,Nav} from 'react-bootstrap'
 
-function setProfile() {
-    return (JSON.parse(localStorage.getItem('user')))?<Nav.Link href="/profile">Profile</Nav.Link>:null
+function setLink(to,what) {
+    return (JSON.parse(localStorage.getItem('user')))?<Nav.Link href={to}>{what}</Nav.Link>:null
 }
 
 const NavBarComponent = () => {
@@ -10,12 +10,13 @@ const NavBarComponent = () => {
     return(<>
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Navbar.Brand href="/">Navbar</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    {setLink('/home','Home')}
                     <Nav.Link href="/mapa">Mapa</Nav.Link>
                     <Nav.Link href="/login">Login</Nav.Link>
-                    {setProfile()}
+                    <Nav.Link href="/register">Register</Nav.Link>
+                    {setLink('/profile','Profile')}
                 </Nav>
             </Container>
         </Navbar>
