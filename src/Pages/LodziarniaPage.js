@@ -29,6 +29,17 @@ const LodziarniaPage = (props) => {
                     })}
                 </ul>
 
+                <p>Legenda:</p>
+                <ul>
+                    <li className="text-success">
+                        Dostepny
+                    </li>
+                    <li className="text-danger ">
+                        Nie Dostepny
+                    </li>
+                    
+                </ul>
+
             </Col>
         </Row>
     </>)
