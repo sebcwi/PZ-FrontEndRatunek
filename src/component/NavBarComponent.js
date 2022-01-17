@@ -10,7 +10,7 @@ const NavBarComponent = () => {
     return(<>
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="/">Navbar</Navbar.Brand>
+                <Navbar.Brand href="/">Lodziarnie</Navbar.Brand>
                 <Nav className="me-auto">
                     {setLink('/home','Home')}
                     <Nav.Link href="/mapa">Mapa</Nav.Link>
