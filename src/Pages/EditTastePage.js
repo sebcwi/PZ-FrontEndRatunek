@@ -39,7 +39,8 @@ const EditTastePage = () => {
         <Row className="justify-content-center">
             {(error)?<p className='text-danger'>{error}</p>:null}
             <Col md={5}>
-                <p>Edytuj smak</p>
+                <div className='card-container2'> 
+                <h2 className='title'>Edytuj smak</h2>
                 <form className="justify-content-center my-5" onSubmit={handleSubmit(onEditTaste)}>
                     <select class="form-select" {...register("taste")}>
                         {taste.data && taste.data.map((item)=>{
@@ -52,16 +53,21 @@ const EditTastePage = () => {
                         <input type="checkbox" class="form-check-input mx-4" {...register("dostepnosc")}/>
                     </label>
                     <br/>
+                    <div className='title'>
                     <button type="submit" className="btn btn-primary my-5">Edytuj</button>
+                    </div>
                 </form>
                 <Link
+                
                     className="justify-content-center my-5"
                     to={{
                         pathname: "/addTastePage",
                         search: "?address=" + address,
-                    }}>
+                    }}><div className='title'>
                         Dodaj nowy Smak
+                    </div>
                 </Link>
+                </div>
             </Col>
             
         </Row>

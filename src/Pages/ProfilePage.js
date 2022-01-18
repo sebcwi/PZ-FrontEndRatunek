@@ -36,12 +36,12 @@ const ProfilePage = () => {
     return (<>
     
         <Row>
-            <Col className='p-2 mx-4 my-5'>
-                <button className="btn btn-danger" onClick={logOut}>Wyloguj</button>
-                <p>Name:{currentUser.data && currentUser.data.name}</p>
-                <p>Email:{currentUser.data && currentUser.data.name}</p>
-                 <p>Favourite:</p>
-                <ul>
+            <Col className='p-2 mx-4'>
+                <div className='card-container2'>
+                <h2>Name:{currentUser.data && currentUser.data.name}</h2>
+                <h2>Email:{currentUser.data && currentUser.data.name}</h2>
+                 <h4>Favourite:</h4>
+                <ul className='li2'>
                     {currentUser.data && currentUser.data.favourite.map((taste,key)=>{
                         return <li key={key}>
                             <Link
@@ -54,9 +54,12 @@ const ProfilePage = () => {
                     </li>
                     })}
                 </ul>
+                <button className="btn btn-danger" onClick={logOut}>Wyloguj</button>
+                </div>
             </Col>
-            <Col className='my-5'>
-                <p>Nowa Placowka</p>
+            <Col className='float-left'>
+                <div className='card-container2'>
+                <h2>Nowa Placowka</h2>
                 {(done)?<p>Dodano</p>:null}
                 <form className="my-5" onSubmit={handleSubmit(onSubmit)}>
                         <input type="text" className="form-control mb-3" placeholder="city" {...register("city")}/>
@@ -65,10 +68,12 @@ const ProfilePage = () => {
                         <input type="number" className="form-control mb-3" placeholder="lon"  step="0.0000001" {...register("lon")}/>
                         <button type="submit" className="btn btn-primary">Rejestruj</button>
                 </form>
+                </div>
             </Col>
         </Row>
-        <Row className='p-2 mx-4 my-5'>
-            <p>Twoje placowki</p>
+        <Row className='p-2 mx-4'>
+            <div className='card-container2'>
+            <h2>Twoje placowki</h2>
             {console.log(lodziarnie)}
             {
                 lodziarnie.data && lodziarnie.data.map((item,key)=>{
@@ -88,6 +93,7 @@ const ProfilePage = () => {
                     }
                 })
             }
+            </div>
         </Row>
     
     </>)
