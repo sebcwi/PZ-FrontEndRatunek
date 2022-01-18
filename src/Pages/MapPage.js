@@ -2,14 +2,12 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import React,{useEffect, useState} from 'react';
 import { getApi } from '../apiTools/apiTools';
 import { useHistory } from 'react-router-dom'
-
+import App from '../App.css'
 
 
 const containerStyle = {
     width: '100vw',
-    height: '100vh',
-    padding: '0px',
-    margin: '0px'
+    height: '100vh'
   };
   
   const center = {
@@ -44,6 +42,9 @@ const MapPage = () =>{
       }, [])
 
       return isLoaded ? (
+
+        <div>
+          <div>
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
@@ -57,6 +58,8 @@ const MapPage = () =>{
                   }}/>
               })}
           </GoogleMap>
+          </div>
+        </div>
       ) : <></>
 }
 

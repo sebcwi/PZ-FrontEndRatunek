@@ -17,7 +17,7 @@ const HomePage = () => {
     },[setLodziarnie,setHealth])
 
     return (<>
-        {/* <p className="text-center">Api Status: {health.data}</p> */}
+        <h1 className="text-center">Lodziarnie</h1>
         <Row>
             {lodziarnie && lodziarnie.data.map((lodziania,key)=>{
                 return(

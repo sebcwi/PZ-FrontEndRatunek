@@ -29,7 +29,8 @@ const AddTastePage = () => {
         <Row className="justify-content-center">
             {(error)?<p className='text-danger'>{error}</p>:null}
             <Col md={6}>
-                <p>Dodaj smak</p>
+                <div className='card-container2'>
+                <h2 className='title'>Dodaj smak</h2>
                 <form className="justify-content-center my-5" onSubmit={handleSubmit(onAddTaste)}>
                     <input type="text" class="form-control my-2" placeholder='Nowa nazwa' {...register("nazwaSmaku")}/>
                     <label>
@@ -37,8 +38,11 @@ const AddTastePage = () => {
                         <input type="checkbox" class="form-check-input mx-4" {...register("dostepnosc")}/>
                     </label>
                     <br/>
+                    <div className='title'>
                     <button type="submit" className="btn btn-primary my-5">Dodaj</button>
+                    </div>
                 </form>
+                </div>
             </Col>
         </Row>
         

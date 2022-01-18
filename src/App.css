@@ -36,3 +36,165 @@
     transform: rotate(360deg);
   }
 }
+.map{
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 70vw;
+  height: 70vw;
+
+}
+.centeredFavors{
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+}
+.centered{
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+.centered-desc{
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+.centered-open{
+  margin: auto;
+  width: 45%;
+  padding: 10px;
+}
+.centered-butt{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+input[type="radio"]{
+  display: none;
+}
+.star{
+  cursor: pointer;
+  transition: color 200ms;
+}
+.starDiv{
+  display: flex;
+  margin-right: 47%;
+  margin-left: 38.5%;
+}
+
+.Search-bar{
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+}
+.card-container{
+  width: 10em;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.container{
+  margin: auto;
+  
+}
+.card-container{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.card-container2{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+.title{
+  text-align: center;
+}
+.button {
+  background-color: white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.button1{
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.button1:hover {  
+  background-color: #555555;
+  color: white;
+}
+.Hours{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.button2{
+  font-size: 25px;
+  padding: 15px 32px;
+  margin-bottom: 15px;
+}
+.test{
+  margin-right: 40%;
+  margin-left: 40%;
+  text-align: center;
+  border: 2px solid #555555;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.li{
+  list-style-type: none;
+  display: center;
+}
+.li2{
+  list-style-type: none;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.map{
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 70vw;
+  height: 70vw;
+}
+.home{
+  height: 100%;
+  width: 100%;
+}
+.title2{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.footer{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+}
+.picture{
+  margin-top: 30px;
+}

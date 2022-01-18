@@ -23,11 +23,11 @@ const RegisterPage = () => {
     }
 
     return (<>
-        <p className="text-center">Register</p>
+        <p className="text-center">Welcome Register</p>
 
         <Row className="justify-content-center">
             {(error)?<p className='text-danger'>{error}</p>:null}
-            <Col md={4} className="my-5">
+            <Col md={4}>
                 <form className="justify-content-center" onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" className="form-control mb-3" placeholder="Name" {...register("name")}/>
                     <input type="email" className="form-control mb-3" placeholder="Email" {...register("email")}/>
