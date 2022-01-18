@@ -7,7 +7,9 @@ import { useHistory } from 'react-router-dom'
 
 const containerStyle = {
     width: '100vw',
-    height: '100vh'
+    height: '100vh',
+    padding: '0px',
+    margin: '0px'
   };
   
   const center = {

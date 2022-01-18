@@ -23,9 +23,9 @@ const LoginPage = () => {
     }
 
     return (<>
-        <p className="text-center">Welcome LoginPage</p>
+        <p className="text-center">Login</p>
 
-        <Row className="justify-content-center">
+        <Row className="justify-content-center my-5">
             {(error)?<p className='text-danger'>{error}</p>:null}
             <Col md={4}>
                 <form className="justify-content-center" onSubmit={handleSubmit(onSubmit)}>

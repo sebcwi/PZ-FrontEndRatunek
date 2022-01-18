@@ -36,7 +36,7 @@ const ProfilePage = () => {
     return (<>
     
         <Row>
-            <Col className='p-2 mx-4'>
+            <Col className='p-2 mx-4 my-5'>
                 <button className="btn btn-danger" onClick={logOut}>Wyloguj</button>
                 <p>Name:{currentUser.data && currentUser.data.name}</p>
                 <p>Email:{currentUser.data && currentUser.data.name}</p>
@@ -55,7 +55,7 @@ const ProfilePage = () => {
                     })}
                 </ul>
             </Col>
-            <Col className='float-left'>
+            <Col className='my-5'>
                 <p>Nowa Placowka</p>
                 {(done)?<p>Dodano</p>:null}
                 <form className="my-5" onSubmit={handleSubmit(onSubmit)}>
@@ -67,7 +67,7 @@ const ProfilePage = () => {
                 </form>
             </Col>
         </Row>
-        <Row className='p-2 mx-4'>
+        <Row className='p-2 mx-4 my-5'>
             <p>Twoje placowki</p>
             {console.log(lodziarnie)}
             {

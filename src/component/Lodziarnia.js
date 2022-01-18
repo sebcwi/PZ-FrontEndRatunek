@@ -24,7 +24,7 @@ const Lodziarnia = (props) => {
 
     return(
     <>
-        <Row className='border border-dark p-1 mx-2'>
+        <Row className='border border-dark p-1 mx-2 my-3'>
             <p>Name: {props.data.name}</p>
             <p>Adress: {props.data.adress}</p>
             <p>City: {props.data.city}</p>
